@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kfan1/MessingAround.git"
+    "url": "git+https://github.com/eleetcoding/landing_page.git"
   },
   "author": "Kevin Fan",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kfan1/boiler_plate/issues"
+    "url": "https://github.com/eleetcoding/landing_page/issues"
   },
-  "homepage": "https://github.com/kfan1/boiler_plate",
+  "homepage": "https://eleetcoding.com",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "bcryptjs": "^2.4.3",
