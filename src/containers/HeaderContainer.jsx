@@ -5,7 +5,7 @@ import styles from './HeaderContainer.module.scss';
 
 export default function header() {
   return (
-    <Navbar className={styles.navbar} expand='lg'>
+    <Navbar sticky='top' className={styles.navbar} expand='lg'>
       <Container fluid>
         <Navbar.Brand className={styles.logo} href='/'>
           eLeet
