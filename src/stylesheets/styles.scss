@@ -5,3 +5,20 @@ body {
   background-color: $superLightGrey;
   color: $primary;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $secondary;
+    color: $white;
+  }
+}
+
+body[theme='dark'] {
+  background-color: $secondary;
+  color: $white;
+}
+
+body[theme='light'] {
+  background-color: $superLightGrey;
+  color: $primary;
+}

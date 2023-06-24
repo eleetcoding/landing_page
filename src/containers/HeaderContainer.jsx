@@ -1,20 +1,18 @@
 import React from 'react';
-import RightSideNavBar from '../components/headerComponents/RightSideNavBar';
-import LeftSideNavBar from '../components/headerComponents/LeftSideNavBar';
-import { useSelector } from 'react-redux';
+import NavBar from '../components/headerComponents/NavBar';
 import { Container, Navbar } from 'react-bootstrap';
+import styles from './HeaderContainer.module.scss';
 
 export default function header() {
-  const myState = useSelector((state) => state.appSlice.myState);
-
   return (
-    <Navbar expand='lg'>
+    <Navbar className={styles.navbar} expand='lg'>
       <Container fluid>
-        <Navbar.Brand href='/'>{myState}</Navbar.Brand>
-        <Navbar.Toggle aria-controls='navbarSupportedContent' />
-        <Navbar.Collapse id='navbarSupportedContent'>
-          <LeftSideNavBar />
-          <RightSideNavBar />
+        <Navbar.Brand className={styles.logo} href='/'>
+          eLeet
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className='justify-content-end'>
+          <NavBar />
         </Navbar.Collapse>
       </Container>
     </Navbar>
