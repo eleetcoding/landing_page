@@ -1,6 +1,10 @@
 @import '_global.scss';
 @import '_settings.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $superLightGrey;
   color: $primary;
@@ -12,13 +16,13 @@ body::-webkit-scrollbar {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: $secondary;
+    background-color: $primary;
     color: $white;
   }
 }
 
 body[theme='dark'] {
-  background-color: $secondary;
+  background-color: $primary;
   color: $white;
 }
 
