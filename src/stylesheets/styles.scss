@@ -6,6 +6,10 @@ body {
   color: $primary;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: $secondary;
