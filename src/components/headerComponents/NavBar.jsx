@@ -27,22 +27,25 @@ export default function NavBar() {
 
   return (
     <>
-      <Nav.Link className={styles.navLinks} href=''>
+      <Nav.Link className={styles.navLinks} href='https://meet.google.com/emg-akph-gib'>
+        Google Meets Link
+      </Nav.Link>
+      <Nav.Link className={styles.navLinks} href='' disabled>
         Events
       </Nav.Link>
-      <Nav.Link className={styles.navLinks} href=''>
+      <Nav.Link className={styles.navLinks} href='' disabled>
         Practice
       </Nav.Link>
-      <Nav.Link className={styles.navLinks} href=''>
+      <Nav.Link className={styles.navLinks} href='' disabled>
         About Us
       </Nav.Link>
-      <Nav.Link className={styles.navLinks} href=''>
-        Login
-      </Nav.Link>
-      <Nav.Link className={styles.navLinks} href=''>
+      <Nav.Link className={styles.navLinks} href='' disabled>
         Get Started
       </Nav.Link>
-      <NavDropdown title='Dropdown'>
+      <Nav.Link className={styles.navLinks} href='' disabled>
+        Login
+      </Nav.Link>
+      <NavDropdown className={styles.navLinks} title='Dark Mode'>
         <NavDropdown.Item onClick={() => dispatch(setColorTheme('light'))}>
           <i className='fa-solid fa-sun'></i>
         </NavDropdown.Item>
