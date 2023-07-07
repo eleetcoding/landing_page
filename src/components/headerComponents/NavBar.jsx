@@ -30,7 +30,7 @@ export default function NavBar() {
       <Nav.Link className={styles.navLinks} href='https://meet.google.com/emg-akph-gib'>
         Google Meets Link
       </Nav.Link>
-      <Nav.Link className={styles.navLinks} href='' disabled>
+      {/* <Nav.Link className={styles.navLinks} href='' disabled>
         Events
       </Nav.Link>
       <Nav.Link className={styles.navLinks} href='' disabled>
@@ -44,7 +44,7 @@ export default function NavBar() {
       </Nav.Link>
       <Nav.Link className={styles.navLinks} href='' disabled>
         Login
-      </Nav.Link>
+      </Nav.Link> */}
       <NavDropdown className={styles.navLinks} title='Dark Mode'>
         <NavDropdown.Item onClick={() => dispatch(setColorTheme('light'))}>
           <i className='fa-solid fa-sun'></i>
