@@ -8,6 +8,7 @@ html {
 body {
   background-color: $superLightGrey;
   color: $primary;
+  --scroll: 0;
 }
 
 body::-webkit-scrollbar {

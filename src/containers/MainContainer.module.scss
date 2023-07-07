@@ -7,36 +7,25 @@
   letter-spacing: 5px;
   font-size: 200px;
   margin-top: 25vh;
-  margin-left: 49vw;
-
-  animation: moveLeft 1s linear infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-}
-
-@keyframes moveLeft {
-  to {
-    transform: translate(-30vw);
-  }
+  margin-left: calc(49vw + calc(var(--scroll) * -0.015vw));
 }
 
 .opaqueDiv {
   position: fixed;
   top: 30vh;
-  left: calc(49vw + 110px);
+  left: calc(calc(49vw + 110px) + calc(var(--scroll) * 0.015vw));
   height: 500px;
   width: 800px;
   background-color: rgb(241, 241, 241);
+}
 
-  animation: moveRight 1s linear infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
+body[logo='stop'] {
+  .mainLogo {
+    margin-left: calc(49vw + calc(1900 * -0.015vw));
+  }
+  .opaqueDiv {
+    left: calc(calc(49vw + 110px) + calc(1900 * 0.015vw));
+  }
 }
 
 body[theme='dark'] {
@@ -48,11 +37,5 @@ body[theme='dark'] {
 body[theme='light'] {
   .opaqueDiv {
     background-color: rgb(241, 241, 241);
-  }
-}
-
-@keyframes moveRight {
-  to {
-    transform: translate(30vw);
   }
 }
