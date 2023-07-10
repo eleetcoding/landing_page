@@ -8,6 +8,9 @@ export default function AboutContainer() {
       <div className={styles.founders}>Our Founders</div>
       <div className={styles.bio}>
         <div className={styles.eachPerson}>
+          <img
+            className={styles.profilePic}
+            src='https://media.licdn.com/dms/image/D5603AQFnqvczuDYXpA/profile-displayphoto-shrink_800_800/0/1687726118528?e=1694649600&v=beta&t=lioRd1xOLDUYmrHgQZao5bEndchHwC5HFNwNViX6daI'></img>
           <p className={styles.names}>Jimmy Tran</p>
           <p>Co-Founder and CEO</p>
           <a className={styles.links} href='https://www.linkedin.com/in/jimmytran48/'>
@@ -18,6 +21,9 @@ export default function AboutContainer() {
           </a>
         </div>
         <div className={styles.eachPerson}>
+          <img
+            className={styles.profilePic}
+            src='https://media.licdn.com/dms/image/D4E03AQFR2WCODxeL4Q/profile-displayphoto-shrink_800_800/0/1682083113503?e=1694649600&v=beta&t=s8uX4LLbc7sz63yyhppNqm-6Lqmw3rZaf5c6V2pjAW4'></img>
           <p className={styles.names}>Joseph Caballero</p>
           <p>Co-Founder and CFO</p>
           <a className={styles.links} href='https://www.linkedin.com/in/joseph-w-caballero/'>
@@ -54,12 +60,15 @@ export default function AboutContainer() {
           </a>
         </div>
         <div className={styles.eachPerson}>
+          <img
+            className={styles.profilePic}
+            src='https://media.licdn.com/dms/image/D4E03AQEK6mfQcqad7w/profile-displayphoto-shrink_800_800/0/1667230321096?e=1694649600&v=beta&t=x7ftoATwu1rv21Hfej2XxkhAorwNH0KmVfg1zYH6zoc'></img>
           <p className={styles.names}>Kevin Fan</p>
           <p>Co-Founder and CTO</p>
           <a className={styles.links} href='https://www.linkedin.com/in/kfan1/'>
             <i className='fa-brands fa-linkedin'></i>
           </a>
-          <a className={styles.links} href=''>
+          <a className={styles.links} href='https://github.com/kfan1'>
             <i className='fa-brands fa-github'></i>
           </a>
         </div>
