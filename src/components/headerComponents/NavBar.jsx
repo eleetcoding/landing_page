@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 export default function NavBar() {
   const dispatch = useDispatch();
   const colorTheme = useSelector((state) => state.appSlice.colorTheme);
-  let currTheme;
   let selectedDay;
   let selectedNight;
 
@@ -18,12 +17,14 @@ export default function NavBar() {
 
   document.querySelector('body').setAttribute('theme', colorTheme);
 
+  let sunMoon = '';
+
   if (colorTheme === 'dark') {
-    currTheme = <i className='fa-solid fa-moon'></i>;
     selectedNight = <i className='fa-solid fa-check'></i>;
+    sunMoon = <i className='fa-solid fa-moon'></i>;
   } else {
-    currTheme = <i className='fa-solid fa-sun'></i>;
     selectedDay = <i className='fa-solid fa-check'></i>;
+    sunMoon = <i className='fa-solid fa-sun'></i>;
   }
 
   return (
@@ -38,7 +39,7 @@ export default function NavBar() {
           About Us
         </Link>
       </Nav.Link>
-      <NavDropdown className={styles.navLinks} title='Dark Mode'>
+      <NavDropdown className={styles.navLinks} title={sunMoon}>
         <NavDropdown.Item onClick={() => dispatch(setColorTheme('light'))}>
           <i className='fa-solid fa-sun'></i>
         </NavDropdown.Item>
