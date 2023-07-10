@@ -17,7 +17,7 @@ export default function AboutContainer() {
           <a className={styles.links} href='https://www.linkedin.com/in/jimmytran48/'>
             <i className='fa-brands fa-linkedin'></i>
           </a>
-          <a className={styles.links} href=''>
+          <a className={styles.links} href='https://github.com/JimmyTran48'>
             <i className='fa-brands fa-github'></i>
           </a>
         </div>
@@ -30,7 +30,7 @@ export default function AboutContainer() {
           <a className={styles.links} href='https://www.linkedin.com/in/joseph-w-caballero/'>
             <i className='fa-brands fa-linkedin'></i>
           </a>
-          <a className={styles.links} href=''>
+          <a className={styles.links} href='https://github.com/Joseph-Caballero'>
             <i className='fa-brands fa-github'></i>
           </a>
         </div>
@@ -43,7 +43,7 @@ export default function AboutContainer() {
           <a className={styles.links} href='https://www.linkedin.com/in/praiseemmanuel/'>
             <i className='fa-brands fa-linkedin'></i>
           </a>
-          <a className={styles.links} href=''>
+          <a className={styles.links} href='https://github.com/praisepelumi'>
             <i className='fa-brands fa-github'></i>
           </a>
         </div>
@@ -56,7 +56,7 @@ export default function AboutContainer() {
           <a className={styles.links} href='https://www.linkedin.com/in/mmohtasin/'>
             <i className='fa-brands fa-linkedin'></i>
           </a>
-          <a className={styles.links} href=''>
+          <a className={styles.links} href='https://github.com/viiewss'>
             <i className='fa-brands fa-github'></i>
           </a>
         </div>
