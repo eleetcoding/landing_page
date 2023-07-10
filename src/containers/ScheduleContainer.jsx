@@ -5,10 +5,96 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setInstructor } from '../store/slices/appSlice';
 
 export default function ScheduleContainer() {
+  // TODO turn this into a fetch request to a database instead of hard writing each item and use state
   const instructor = useSelector((state) => state.appSlice.instructor);
   const dispatch = useDispatch();
+  const allEvents = {
+    Joseph: [
+      <div className={styles.event}>
+        <h3>Arrays and Strings w/ Joseph</h3>
+        <p>Monday July 10, 2023 @ 1pm-3pm</p>
+      </div>,
+    ],
+    Jimmy: [
+      <div className={styles.event}>
+        <h3>1D Dynamic Programming w/ Jimmy</h3>
+        <p>Tuesday July 11, 2023 @ 9pm-11pm</p>
+      </div>,
+      <div className={styles.event}>
+        <h3>2D Dynamic Programming w/ Jimmy</h3>
+        <p>Thursday July 13, 2023 @ 9pm-11pm</p>
+      </div>,
+    ],
+    Mahir: [
+      <div className={styles.event}>
+        <h3>Two Pointer w/ Mahir</h3>
+        <p>Wednesday July 12, 2023 @ 1pm-3pm</p>
+      </div>,
+      <div className={styles.event}>
+        <h3>Sliding Window w/ Mahir</h3>
+        <p>Monday July 17, 2023 @ 1pm-3pm</p>
+      </div>,
+    ],
+    Praise: [
+      <div className={styles.event}>
+        <h3>Binary Trees w/ Praise</h3>
+        <p>Tuesday July 18, 2023 @ 9pm-11pm</p>
+      </div>,
+    ],
+    Kevin: [
+      <div className={styles.event}>
+        <h3>Graphs w/ Kevin</h3>
+        <p>Wednesday July 19, 2023 @ 1pm-3pm</p>
+      </div>,
+      <div className={styles.event}>
+        <h3>Linked Lists w/ Kevin</h3>
+        <p>Thursday July 20, 2023 @ 9pm-11pm</p>
+      </div>,
+    ],
+  };
 
-  // TODO turn this into a fetch request to a database instead of hard writing each item and use state
+  let events = [];
+
+  for (let key in allEvents) {
+    if (key === instructor) events = allEvents[key];
+  }
+
+  if (instructor === 'All')
+    events = [
+      <div className={styles.event}>
+        <h3>Arrays and Strings w/ Joseph</h3>
+        <p>Monday July 10, 2023 @ 1pm-3pm</p>
+      </div>,
+      <div className={styles.event}>
+        <h3>1D Dynamic Programming w/ Jimmy</h3>
+        <p>Tuesday July 11, 2023 @ 9pm-11pm</p>
+      </div>,
+      <div className={styles.event}>
+        <h3>Two Pointer w/ Mahir</h3>
+        <p>Wednesday July 12, 2023 @ 1pm-3pm</p>
+      </div>,
+      <div className={styles.event}>
+        <h3>2D Dynamic Programming w/ Jimmy</h3>
+        <p>Thursday July 13, 2023 @ 9pm-11pm</p>
+      </div>,
+      <div className={styles.event}>
+        <h3>Sliding Window w/ Mahir</h3>
+        <p>Monday July 17, 2023 @ 1pm-3pm</p>
+      </div>,
+      <div className={styles.event}>
+        <h3>Binary Trees w/ Praise</h3>
+        <p>Tuesday July 18, 2023 @ 9pm-11pm</p>
+      </div>,
+      <div className={styles.event}>
+        <h3>Graphs w/ Kevin</h3>
+        <p>Wednesday July 19, 2023 @ 1pm-3pm</p>
+      </div>,
+      <div className={styles.event}>
+        <h3>Linked Lists w/ Kevin</h3>
+        <p>Thursday July 20, 2023 @ 9pm-11pm</p>
+      </div>,
+    ];
+
   return (
     <div className={styles.scheduleDiv}>
       <div className={styles.scheduleHeader}>
@@ -22,6 +108,7 @@ export default function ScheduleContainer() {
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
+          <Dropdown.Item onClick={() => dispatch(setInstructor('All'))}>All</Dropdown.Item>
           <Dropdown.Item onClick={() => dispatch(setInstructor('Mahir'))}>Mahir</Dropdown.Item>
           <Dropdown.Item onClick={() => dispatch(setInstructor('Jimmy'))}>Jimmy</Dropdown.Item>
           <Dropdown.Item onClick={() => dispatch(setInstructor('Kevin'))}>Kevin</Dropdown.Item>
@@ -29,38 +116,7 @@ export default function ScheduleContainer() {
           <Dropdown.Item onClick={() => dispatch(setInstructor('Praise'))}>Praise</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-      <div className={styles.event}>
-        <h3>Arrays and Strings w/ Joseph</h3>
-        <p>Monday July 10, 2023 @ 1pm-3pm</p>
-      </div>
-      <div className={styles.event}>
-        <h3>1D Dynamic Programming w/ Jimmy</h3>
-        <p>Tuesday July 11, 2023 @ 9pm-11pm</p>
-      </div>
-      <div className={styles.event}>
-        <h3>Two Pointer w/ Mahir</h3>
-        <p>Wednesday July 12, 2023 @ 1pm-3pm</p>
-      </div>
-      <div className={styles.event}>
-        <h3>2D Dynamic Programming w/ Jimmy</h3>
-        <p>Thursday July 13, 2023 @ 9pm-11pm</p>
-      </div>
-      <div className={styles.event}>
-        <h3>Sliding Window w/ Mahir</h3>
-        <p>Monday July 17, 2023 @ 1pm-3pm</p>
-      </div>
-      <div className={styles.event}>
-        <h3>Binary Trees w/ Praise</h3>
-        <p>Tuesday July 18, 2023 @ 9pm-11pm</p>
-      </div>
-      <div className={styles.event}>
-        <h3>Graphs w/ Kevin</h3>
-        <p>Wednesday July 19, 2023 @ 1pm-3pm</p>
-      </div>
-      <div className={styles.event}>
-        <h3>Linked Lists w/ Kevin</h3>
-        <p>Thursday July 20, 2023 @ 9pm-11pm</p>
-      </div>
+      {events}
     </div>
   );
 }
