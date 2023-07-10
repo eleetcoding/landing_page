@@ -28,9 +28,6 @@ export default function NavBar() {
 
   return (
     <>
-      {/* <Nav.Link className={styles.navLinks} href='https://meet.google.com/emg-akph-gib'>
-        Google Meets Link
-      </Nav.Link> */}
       <Nav.Link>
         <Link className={styles.navLinks} to='schedule'>
           Schedule

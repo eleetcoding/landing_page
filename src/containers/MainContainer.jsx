@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './MainContainer.module.scss';
+import { Link } from 'react-router-dom';
 
 export default function main() {
   window.addEventListener(
@@ -31,9 +32,20 @@ export default function main() {
         </h2>
         <p className={styles.introText}>
           Whether you've been an engineering for 20 years or just started yesterday, I'm sure we have something for you.
-          Check out our schedule for our Algorithm white-boarding sessions. We have a hangout room Monday-Friday
-          10am-10pm for accountability, motivation, application sprints, question and answers, and more! Join our
-          discord to meet like-minded engineers to hangout and stay up to date with any upcoming events!
+          Check out our{' '}
+          <Link className={styles.schedule} to='schedule'>
+            <i className='fa-solid fa-calendar-days'></i> schedule
+          </Link>{' '}
+          for our Algorithm white-boarding sessions. We have a{' '}
+          <a className={styles.schedule} href='https://meet.google.com/emg-akph-gib'>
+            <i className='fa-solid fa-video'></i> hangout room
+          </a>{' '}
+          Monday-Friday 10am-10pm for accountability, motivation, application sprints, question and answers, and more!
+          Join our{' '}
+          <a className={styles.schedule} href='https://discord.gg/bxtH95tb'>
+            <i className='fa-brands fa-discord'></i> discord
+          </a>{' '}
+          to meet like-minded engineers and stay up to date with any upcoming events!
         </p>
       </div>
     </>

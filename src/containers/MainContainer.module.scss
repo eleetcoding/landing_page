@@ -54,11 +54,12 @@ body[theme='light'] {
     padding-left: 10vw;
     text-align: center;
   }
-
 }
 
 .everyone {
-  color: rgb(95, 0, 219);
+  background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heart:hover {
@@ -66,7 +67,7 @@ body[theme='light'] {
 }
 
 .learn {
-  color: rgb(0, 81, 255);
+  color: rgb(255, 251, 0);
 }
 
 .grow {
@@ -76,4 +77,14 @@ body[theme='light'] {
 .introText {
   padding-top: 20px;
   font-size: 18px;
+}
+
+.schedule {
+  text-decoration: none;
+  color: rgb(0, 153, 255);
+  font-weight: 700;
+}
+
+.schedule:hover {
+  color: gray;
 }
