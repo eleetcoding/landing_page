@@ -18,6 +18,7 @@ export default function main() {
     <div className={styles.bigDiv}>
       <p className={styles.mainLogo}>eLEET</p>
       <div className={styles.opaqueDiv}></div>
+      <p>Join our community of </p>
     </div>
   );
 }

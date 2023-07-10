@@ -12,8 +12,8 @@ function App() {
       <HeaderContainer />
       <Routes>
         <Route exact path='/' element={<MainPage />} />
-        <Route exact path='/schedule' element={<SchedulePage />} />
-        <Route exact path='/about' element={<AboutPage />} />
+        <Route path='/schedule' element={<SchedulePage />} />
+        <Route path='/about' element={<AboutPage />} />
       </Routes>
       <FooterContainer />
     </div>
