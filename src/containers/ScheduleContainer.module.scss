@@ -1,0 +1,21 @@
+.scheduleDiv {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.scheduleHeader {
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 50px 0;
+  margin-bottom: 40px;
+}
+
+.event {
+  margin: 30px 20vw;
+  padding: 20px 0;
+  border: solid;
+}
+
+.event:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+}
