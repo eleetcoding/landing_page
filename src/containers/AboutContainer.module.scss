@@ -37,4 +37,14 @@
 .links {
   font-size: 28px;
   padding: 0 15px;
+  color: inherit;
+}
+
+.links:hover {
+  color: gray;
+}
+
+.profilePic {
+  border-radius: 50%;
+  width: 300px;
 }
