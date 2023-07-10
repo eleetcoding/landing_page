@@ -31,7 +31,7 @@ export default function main() {
           together.
         </h2>
         <p className={styles.introText}>
-          Whether you've been an engineering for 20 years or just started yesterday, I'm sure we have something for you.
+          Whether you've been an engineer for 20 years or just started yesterday, I'm sure we have something for you.
           Check out our{' '}
           <Link className={styles.schedule} to='schedule'>
             <i className='fa-solid fa-calendar-days'></i> schedule
