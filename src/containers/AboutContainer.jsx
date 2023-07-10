@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './AboutContainer.module.scss';
+import kevinPic from '../assets/kevin.jpg';
 
 export default function AboutContainer() {
   return (
@@ -60,9 +61,7 @@ export default function AboutContainer() {
           </a>
         </div>
         <div className={styles.eachPerson}>
-          <img
-            className={styles.profilePic}
-            src='https://media.licdn.com/dms/image/D4E03AQEK6mfQcqad7w/profile-displayphoto-shrink_800_800/0/1667230321096?e=1694649600&v=beta&t=x7ftoATwu1rv21Hfej2XxkhAorwNH0KmVfg1zYH6zoc'></img>
+          <img className={styles.profilePic} src={kevinPic}></img>
           <p className={styles.names}>Kevin Fan</p>
           <p>Co-Founder and CTO</p>
           <a className={styles.links} href='https://www.linkedin.com/in/kfan1/'>
