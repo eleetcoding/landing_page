@@ -3,6 +3,7 @@ import { Nav, NavDropdown } from 'react-bootstrap';
 import styles from './Navbar.module.scss';
 import { setColorTheme } from '../../store/slices/appSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
   const dispatch = useDispatch();
@@ -30,11 +31,15 @@ export default function NavBar() {
       {/* <Nav.Link className={styles.navLinks} href='https://meet.google.com/emg-akph-gib'>
         Google Meets Link
       </Nav.Link> */}
-      <Nav.Link className={styles.navLinks} href='/schedule'>
-        Schedule
+      <Nav.Link>
+        <Link className={styles.navLinks} to='schedule'>
+          Schedule
+        </Link>
       </Nav.Link>
-      <Nav.Link className={styles.navLinks} href='/about'>
-        About Us
+      <Nav.Link>
+        <Link className={styles.navLinks} to='about'>
+          About Us
+        </Link>
       </Nav.Link>
       <NavDropdown className={styles.navLinks} title='Dark Mode'>
         <NavDropdown.Item onClick={() => dispatch(setColorTheme('light'))}>
