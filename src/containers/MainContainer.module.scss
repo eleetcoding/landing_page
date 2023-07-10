@@ -1,7 +1,7 @@
 @import '../stylesheets/_settings.scss';
 
 .bigDiv {
-  height: 300vh;
+  min-height: 300vh;
 }
 
 .mainLogo {
@@ -40,4 +40,40 @@ body[theme='light'] {
   .opaqueDiv {
     background-color: $superLightGrey;
   }
+}
+
+.intro {
+  width: 70vw;
+  padding-left: 20vw;
+  padding-bottom: 5vw;
+}
+
+@media screen and (max-width: 1200px) {
+  .intro {
+    width: 90vw;
+    padding-left: 10vw;
+  }
+  
+  
+}
+
+.everyone {
+  color: rgb(95, 0, 219);
+}
+
+.heart:hover {
+  cursor: pointer;
+}
+
+.learn {
+  color: rgb(0, 81, 255);
+}
+
+.grow {
+  color: green;
+}
+
+.introText {
+  padding-top: 20px;
+  font-size: 18px;
 }
