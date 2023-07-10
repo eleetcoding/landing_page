@@ -1,3 +1,5 @@
+@import '../stylesheets/_settings.scss';
+
 .bigDiv {
   height: 300vh;
 }
@@ -30,12 +32,12 @@ body[logo='stop'] {
 
 body[theme='dark'] {
   .opaqueDiv {
-    background-color: rgb(27, 27, 27);
+    background-color: $primary;
   }
 }
 
 body[theme='light'] {
   .opaqueDiv {
-    background-color: rgb(241, 241, 241);
+    background-color: $superLightGrey;
   }
 }

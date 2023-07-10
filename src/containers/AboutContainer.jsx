@@ -5,7 +5,7 @@ export default function AboutContainer() {
   return (
     <div className={styles.aboutDiv}>
       <div className={styles.aboutHeader}>We Love Algorithms</div>
-      <div>Our Founders</div>
+      <div className={styles.founders}>Our Founders</div>
     </div>
   );
 }
